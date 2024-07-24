@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/component/theme-provider";
 
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+
+import Particles from "@/components/magicui/particles";
+import ParticlesBg from "@/components/component/bg";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="portfolio"
+        >
+          {children}
+          <ParticlesBg className="fixed -z-10 top-0 bottom-0 left-0 right-0 h-full w-full" />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
