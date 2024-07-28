@@ -32,24 +32,18 @@ const Skills = () => {
     "numpy",
   ];
   return (
-    <Section crosses>
-      <div className="container lg:flex">
+    <Section crosses id="skills">
+      <div className="container lg:flex items-center">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">About Me</h2>
-          <ul className="max-w-[22rem] mb-10 md:mb-14 ">
-            {collabContent.map((item, index) => (
-              <li className="mb-3 py-3 " key={index}>
-                <div className="flex items-center">
-                  <Image src={check} width={24} height={24} alt="" />
-                  <h6 className="body-2 ml-5">{item.title}</h6>
-                </div>
-                {item.text && (
-                  <p className="body-2 mt-3 text-n-4">{item.text}</p>
-                )}{" "}
-              </li>
-            ))}
-          </ul>
-          <Button>Try it now</Button>
+          <p className="text-n-3">
+            Hello, I'm Somanshu Bhardwaj, a Full Stack Developer and a
+            Engineering Physics Student at NIT Hamirpur. I love to build things
+            that live on the internet. I develop exceptional websites and web
+            apps that provide intuitive, pixel-perfect user interfaces with
+            efficient and modern backends.
+          </p>
+          <Button className="mt-5">Try it now</Button>
         </div>
         <div className="lg:ml-auto xl:w-[38rem]">
           <div className="">

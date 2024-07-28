@@ -9,7 +9,7 @@ import ClipPath from "@/app/assets/svg/ClipPath";
 import { LuGithub } from "react-icons/lu";
 const Projects = () => {
   return (
-    <Section id={"#feature"}>
+    <Section id={"projects"}>
       <div className="container z-2 relative">
         <Heading className={"md:max-w-md lg:max-w-2xl"} title={"Projects "} />
         <div className="flex flex-wrap gap-10 mb-10">

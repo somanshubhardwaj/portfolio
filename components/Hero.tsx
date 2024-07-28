@@ -27,7 +27,7 @@ const Hero = () => {
               Somanshu Bhardwaj
               <Image
                 src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
+                className="absolute top-full left-0 w-full "
                 width={624}
                 height={28}
                 alt="Curve"
@@ -35,14 +35,14 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Necessitatibus debitis aperiam dicta obcaecati doloremque!
+            Hello, I'm Somanshu Bhardwaj, a Full Stack Developer and a
+            Engineering Physics Student at NIT Hamirpur.
           </p>
           <div className="flex gap-2 justify-center items-center">
-            <Button>Get Started</Button>
+            <Button>View Projects</Button>
 
             <Button href="/pricing" white>
-              Github
+              visit Github
             </Button>
           </div>
         </div>

@@ -38,7 +38,7 @@ const Header = () => {
         <nav
           className={`${
             open ? "flex" : "hidden"
-          }  fixed top-[5rem] left-0 right-0 bottom-0 bg-b-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          }  fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div className="relative z-2 flex flex-col items-center justify-center mx-auto lg:flex-row">
             {navigation.map((item, index) => (
@@ -62,10 +62,10 @@ const Header = () => {
           href="#signup"
           className="hidden button mr-8 text-n-1/50 lg:block hover:text-n-1 transition-colors"
         >
-          Signup
+          Visit github
         </a>
         <Button href="#login" className="hidden lg:flex">
-          SignIn
+          Download Cv
         </Button>
         <Button
           className="ml-auto lg:hidden"

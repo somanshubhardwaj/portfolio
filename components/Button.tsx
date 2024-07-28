@@ -28,7 +28,7 @@ const Button = ({
     </button>
   );
   const renderLink = () => (
-    <a href={href} className={classes}>
+    <a href={href} className={classes} target="_blank">
       <span className={spanclasses}>{children}</span>
       {ButtonSvg(white)}
     </a>
