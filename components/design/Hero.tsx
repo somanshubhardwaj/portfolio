@@ -36,7 +36,13 @@ const Rings = () => {
   );
 };
 
-export const BackgroundCircles = ({ parallaxRef }) => {
+import React from "react";
+
+export const BackgroundCircles = ({
+  parallaxRef,
+}: {
+  parallaxRef?: React.RefObject<HTMLElement>;
+}) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

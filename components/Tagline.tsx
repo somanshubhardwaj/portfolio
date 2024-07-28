@@ -6,8 +6,8 @@ const TagLine = ({
   className,
   children,
 }: {
-  className: string;
-  children: ReactNode;
+  className?: string;
+  children?: ReactNode;
 }) => {
   return (
     <div className={`tagline flex items-center ${className || ""}`}>

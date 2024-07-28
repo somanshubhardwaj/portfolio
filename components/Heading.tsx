@@ -6,10 +6,10 @@ const Heading = ({
   text,
   tag,
 }: {
-  className: string;
-  title: string;
-  text: string;
-  tag: string;
+  className?: string;
+  title?: string;
+  text?: string;
+  tag?: string;
 }) => {
   return (
     <div

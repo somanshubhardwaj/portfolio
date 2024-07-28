@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { brainwave } from "@/app/assets/index.js";
 import { navigation } from "@/constants";
 import { usePathname } from "next/navigation";
-import MenuSvg from "@/app/assets/svg/MenuSvg.jsx";
+import MenuSvg from "@/app/assets/svg/MenuSvg";
 import { HambugerMenu } from "./design/Header";
 import Button from "./Button";
 import Image from "next/image";
