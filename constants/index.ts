@@ -326,3 +326,38 @@ export const socials = [
     url: "#",
   },
 ];
+
+/**/
+export const projects = [
+  {
+    id: "0",
+    title: "Notion Clone",
+    text: "This project is a clone of Notion, aiming to replicate some of the core features of the popular note-taking and organization tool. It's built using a modern tech stack including Next.js, React, Convex, and TailwindCSS, providing a rich, interactive user experience.",
+    backgroundUrl: "assets/benefits/card-1.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+    href: "https://sotion-sand.vercel.app/",
+    git: "https://github.com/somanshubhardwaj/notion-clone",
+  },
+  {
+    id: "1",
+    title: "Bio Generator",
+    text: "An AI-powered Bio Generator tool that helps you craft the perfect bio effortlessly. Whether you need a professional, casual, or funny bio, our tool tailors it to your unique style and preferences!",
+    backgroundUrl: "assets/benefits/card-2.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+    light: true,
+    href: "https://bio-generator-lime.vercel.app/",
+    git: "https://github.com/somanshubhardwaj/bio-generator",
+  },
+  {
+    id: "2",
+    title: "Finance Tracker App",
+    text: "The Finance Tracker App is a web application built with Next.js, a React framework for server-side rendering. It allows users to track their financial transactions and manage their expenses.",
+    backgroundUrl: "assets/benefits/card-3.svg",
+    iconUrl: benefitIcon3,
+    imageUrl: benefitImage2,
+    href: "https://finacialtracker.vercel.app/",
+    git: "https://github.com/somanshubhardwaj/finacialtracker",
+  },
+];

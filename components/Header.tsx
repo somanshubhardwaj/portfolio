@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { brainwave } from "@/app/assets/index.js";
+import { brainwave } from "@/app/assets/index";
 import { navigation } from "@/constants";
 import { usePathname } from "next/navigation";
 import MenuSvg from "@/app/assets/svg/MenuSvg";

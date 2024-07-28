@@ -1,4 +1,4 @@
-import ButtonSvg from "@/app/assets/svg/ButtonSvg.jsx";
+import ButtonSvg from "@/app/assets/svg/ButtonSvg";
 
 import { ReactNode } from "react";
 
