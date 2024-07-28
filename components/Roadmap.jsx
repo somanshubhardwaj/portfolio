@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Heading from "./Heading";
 import Section from "./Section";
-import Tagline from "./TagLine";
+import Tagline from "./Tagline";
 import { roadmap } from "../constants";
 import { check2, grid, loading1 } from "../../public/assets";
 import { Gradient } from "./design/Roadmap";
@@ -37,7 +37,7 @@ const Roadmap = () => (
                     <Tagline>{item.date}</Tagline>
 
                     <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
-                      <img
+                      <Image
                         className="mr-2.5"
                         src={item.status === "done" ? check2 : loading1}
                         width={16}
@@ -49,7 +49,7 @@ const Roadmap = () => (
                   </div>
 
                   <div className="mb-10 -my-10 -mx-15">
-                    <img
+                    <Image
                       className="w-full"
                       src={item.imageUrl}
                       width={628}
