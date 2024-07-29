@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Blogsection from "@/components/Blogsection";
 import Github from "@/components/Github";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
         <Skills />
         {/* <Blogsection /> */}
         <Github />
+        <Contact />
         <Footer />
       </div>
       <ButtonGradient />
