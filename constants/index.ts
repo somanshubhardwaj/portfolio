@@ -52,26 +52,19 @@ export const navigation = [
     title: "skills",
     url: "#skills",
   },
-  {
-    id: "3",
-    title: "Blog",
-    url: "#blog",
-  },
+  // {
+  //   id: "3",
+  //   title: "Blog",
+  //   url: "#blog",
+  // },
   {
     id: "4",
-    title: "visit github",
-    url: "#signup",
-    onlyMobile: true,
+    title: "Contact",
+    url: "#contact",
   },
   {
     id: "5",
-    title: "download cv",
-    url: "#login",
-    onlyMobile: true,
-  },
-  {
-    id: "6",
-    title: "github",
+    title: "Github Stats",
     url: "#github",
   },
 ];

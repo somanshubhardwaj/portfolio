@@ -12,7 +12,7 @@ const Github = () => {
           title="Github Stats"
         />
       </div>
-      <div className="flex md:flex-row flex-col justify-around gap-5">
+      <div className="flex md:flex-row flex-col justify-around ">
         <img
           src="https://github-readme-stats-eight-phi-43.vercel.app/api?username=somanshubhardwaj&show_icons=true&theme=transparent&show=prs_merged&hide_border=true&title_color=fff&text_color=fff&icon_color=fff"
           alt="github"

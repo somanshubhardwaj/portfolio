@@ -45,7 +45,10 @@ const Skills = () => {
               and web apps that provide intuitive, pixel-perfect user interfaces
               with efficient and modern backends.
             </p>
-            <Button className="mt-5">Try it now</Button>
+            <h4 className="h5 my-3">My Stack :</h4>
+            <div className="">
+              <img src="https://skillicons.dev/icons?i=typescript,nextjs,react,mongodb,tailwindcss&perline=6" />
+            </div>
           </div>
           <div className="lg:ml-auto xl:w-[38rem]">
             <div className="">

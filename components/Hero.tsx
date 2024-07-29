@@ -35,13 +35,15 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Hello, I'm Somanshu Bhardwaj, a Full Stack Developer and a
+            Hello, I'm Somanshu Bhardwaj, a Full Stack Developer and an
             Engineering Physics Student at NIT Hamirpur.
           </p>
           <div className="flex gap-2 justify-center items-center">
-            <Button>View Projects</Button>
-
-            <Button href="/pricing" white>
+            <a href="#projects">
+              {" "}
+              <Button>View Projects</Button>
+            </a>
+            <Button href="https://github.com/somanshubhardwaj" white>
               visit Github
             </Button>
           </div>
@@ -55,7 +57,7 @@ const Hero = () => {
           <BackgroundCircles />
         </div>
 
-        <CompanyLogo className="hidden relative z-10 mt-20 lg:block" />
+        <CompanyLogo className=" relative z-10 mt-20 block" />
       </div>
 
       <BottomLine />
