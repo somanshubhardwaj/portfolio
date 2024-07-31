@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Particles from "@/components/magicui/Particle";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,6 +26,7 @@ export default function RootLayout({
           ease={80}
           color={"#ffffff"}
         />
+        <Analytics />
       </body>
     </html>
   );
