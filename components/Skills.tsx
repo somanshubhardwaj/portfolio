@@ -36,7 +36,7 @@ const Skills = () => {
     <>
       <Section crosses id="skills">
         <div className="container lg:flex items-center">
-          <div className="max-w-[25rem]">
+          <div className="lg:max-w-[25rem]">
             <h2 className="h2 mb-4 md:mb-8">About Me</h2>
             <p className="text-n-3">
               Hello, I'm Somanshu Bhardwaj, a Full Stack Developer and a

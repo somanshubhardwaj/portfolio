@@ -5,14 +5,14 @@ import Button from "./Button";
 
 const Github = () => {
   return (
-    <Section id="github" crosses>
+    <Section id="github">
       <div className="container md:pb-10">
         <Heading
           tag="I am a passionate Software developer from India"
           title="Github Stats"
         />
       </div>
-      <div className="flex md:flex-row flex-col justify-around ">
+      <div className="flex lg:flex-row flex-col justify-around flex-wrap ">
         <img
           src="https://github-readme-stats-eight-phi-43.vercel.app/api?username=somanshubhardwaj&show_icons=true&theme=transparent&show=prs_merged&hide_border=true&title_color=fff&text_color=fff&icon_color=fff"
           alt="github"

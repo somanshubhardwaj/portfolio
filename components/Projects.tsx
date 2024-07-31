@@ -15,7 +15,7 @@ const Projects = () => {
         <div className="flex flex-wrap gap-10 mb-10">
           {projects.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] mx-auto"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
