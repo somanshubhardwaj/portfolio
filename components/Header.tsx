@@ -1,14 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { brainwave } from "@/app/assets/index";
 import { navigation } from "@/constants";
 import { usePathname } from "next/navigation";
 import MenuSvg from "@/app/assets/svg/MenuSvg";
 import { HambugerMenu } from "./design/Header";
 import Button from "./Button";
-import Image from "next/image";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { motion, stagger, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 const Header = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -29,9 +27,11 @@ const Header = () => {
   const navVariants: Variants = {
     initial: {
       opacity: 0,
+      y: 10,
     },
     animate: {
       opacity: 1,
+      y: 0,
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.5,
@@ -52,6 +52,7 @@ const Header = () => {
             height={45}
             width={45}
             whileHover={{ scale: 1.3 }}
+            transition={{ duration: 0.7 }}
           />
         </a>
         <nav
@@ -63,6 +64,7 @@ const Header = () => {
             className="relative z-2 flex flex-col items-center justify-center mx-auto lg:flex-row"
             initial="initial"
             animate="animate"
+            variants={navVariants}
           >
             {navigation.map((item, index) => (
               <motion.a
