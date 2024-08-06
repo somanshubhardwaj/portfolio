@@ -1,12 +1,8 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Section from "./Section";
-import { collabContent, collabText } from "@/constants";
-import Image from "next/image";
-import { check } from "@/app/assets";
-import Button from "./Button";
 import IconCloud from "./magicui/Cloud";
-import { ScrollText } from "./Text";
-
+import { useInView, motion, Variants } from "framer-motion";
 const Skills = () => {
   const slugs = [
     "typescript",
@@ -32,22 +28,50 @@ const Skills = () => {
     "pandas",
     "numpy",
   ];
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInvView = useInView(ref, {});
+  const AboutVariants: Variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.1,
+        staggerChildren: 0.5,
+        delayChildren: 0.5,
+      },
+    },
+  };
   return (
     <>
       <Section crosses id="skills">
-        <div className="container lg:flex items-center">
+        <motion.div
+          className="container lg:flex items-center"
+          ref={ref}
+          animate={isInvView ? "visible" : "hidden"}
+          variants={AboutVariants}
+        >
           <div className="lg:max-w-[25rem]">
-            <h2 className="h2 mb-4 md:mb-8">About Me</h2>
-            <p className="text-n-3">
+            <motion.h2 className="h2 mb-4 md:mb-8" variants={AboutVariants}>
+              About Me
+            </motion.h2>
+            <motion.p className="text-n-3" variants={AboutVariants}>
               Hello, I'm Somanshu Bhardwaj, a Full Stack Developer and a
               Engineering Physics Student at NIT Hamirpur. I love to build
               things that live on the internet. I develop exceptional websites
               and web apps that provide intuitive, pixel-perfect user interfaces
               with efficient and modern backends.
-            </p>
-            <h4 className="h5 my-3">My Stack :</h4>
+            </motion.p>
+            <motion.h4 className="h5 my-3" variants={AboutVariants}>
+              My Stack :
+            </motion.h4>
             <div className="">
-              <img src="https://skillicons.dev/icons?i=typescript,nextjs,react,mongodb,tailwindcss&perline=6" />
+              <motion.img
+                src="https://skillicons.dev/icons?i=typescript,nextjs,react,mongodb,tailwindcss&perline=6"
+                variants={AboutVariants}
+              />
             </div>
           </div>
           <div className="lg:ml-auto xl:w-[38rem]">
@@ -55,7 +79,7 @@ const Skills = () => {
               <IconCloud iconSlugs={slugs} />
             </div>
           </div>
-        </div>
+        </motion.div>
       </Section>
       {/* <ScrollText /> */}
     </>
