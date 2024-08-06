@@ -8,6 +8,7 @@ import { HambugerMenu } from "./design/Header";
 import Button from "./Button";
 import Image from "next/image";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { motion, stagger, Variants } from "framer-motion";
 const Header = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -25,6 +26,18 @@ const Header = () => {
       enablePageScroll();
     }
   };
+  const navVariants: Variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.5,
+      },
+    },
+  };
   return (
     <div
       className={`fixed top-0 z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm w-full left-0 ${
@@ -33,16 +46,27 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a href="" className="block w-[12rem] xl:mr-8 ">
-          <img src={"/icon.png"} alt="Brainwave" height={45} width={45} />
+          <motion.img
+            src={"/icon.png"}
+            alt="Brainwave"
+            height={45}
+            width={45}
+            whileHover={{ scale: 1.3 }}
+          />
         </a>
         <nav
           className={`${
             open ? "flex" : "hidden"
           }  fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center mx-auto lg:flex-row">
+          <motion.div
+            className="relative z-2 flex flex-col items-center justify-center mx-auto lg:flex-row"
+            initial="initial"
+            animate="animate"
+          >
             {navigation.map((item, index) => (
-              <a
+              <motion.a
+                variants={navVariants}
                 href={item.url}
                 key={index}
                 onClick={handleClick}
@@ -51,9 +75,9 @@ const Header = () => {
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {item.title}
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
           <HambugerMenu />
         </nav>
         <a
