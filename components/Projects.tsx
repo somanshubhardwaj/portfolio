@@ -1,20 +1,46 @@
+"use client";
 import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
-import { benefits, projects } from "@/constants";
+import { projects } from "@/constants";
 import Image from "next/image";
 import Arrow from "@/app/assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "@/app/assets/svg/ClipPath";
 import { LuGithub } from "react-icons/lu";
+import { useInView, motion, Variants } from "framer-motion";
+import { useRef } from "react";
 const Projects = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInvView = useInView(ref, {});
+  const projectsVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.2,
+        delayChildren: 0.5,
+      },
+    },
+  };
   return (
     <Section id={"projects"}>
       <div className="container z-2 relative">
         <Heading className={"md:max-w-md lg:max-w-2xl"} title={"Projects "} />
-        <div className="flex flex-wrap gap-10 mb-10">
+        <motion.div
+          className="flex flex-wrap gap-10 mb-10"
+          ref={ref}
+          animate={isInvView ? "visible" : "hidden"}
+          variants={projectsVariants}
+        >
           {projects.map((item) => (
-            <div
+            <motion.div
+              variants={projectsVariants}
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] mx-auto"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
@@ -61,9 +87,9 @@ const Projects = () => {
                 </div>
               </div>
               <ClipPath />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );
