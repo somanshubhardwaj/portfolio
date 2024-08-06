@@ -12,7 +12,9 @@ import { useInView, motion, Variants } from "framer-motion";
 import { useRef } from "react";
 const Projects = () => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInvView = useInView(ref, {});
+  const isInvView = useInView(ref, {
+    once: true,
+  });
   const projectsVariants: Variants = {
     hidden: {
       opacity: 0,

@@ -14,7 +14,9 @@ const Heading = ({
   tag?: string;
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInvView = useInView(ref, {});
+  const isInvView = useInView(ref, {
+    once: true,
+  });
   const headingVariants: Variants = {
     hidden: {
       opacity: 0,
