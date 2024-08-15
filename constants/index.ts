@@ -347,4 +347,14 @@ export const projects = [
     href: "https://metaverse-two-vert.vercel.app/",
     git: "https://github.com/somanshubhardwaj/metaverse",
   },
+  {
+    id: 4,
+    title: "Portfolio Website",
+    text: "This is my personal portfolio website built using Next.js, React,Framer Motion and TailwindCSS. It showcases my projects, skills, and experience in a clean, modern design.",
+    backgroundUrl: "assets/benefits/card-5.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    href: "https://portfolio-framermotion.vercel.app/",
+    git: "https://github.com/somanshubhardwaj/portfolio-framermotion",
+  },
 ];

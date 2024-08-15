@@ -69,7 +69,7 @@ const Skills = () => {
             </motion.h4>
             <div className="">
               <motion.img
-                src="https://skillicons.dev/icons?i=typescript,nextjs,react,mongodb,tailwindcss&perline=6"
+                src="https://skillicons.dev/icons?i=typescript,nextjs,react,mongodb,tailwindcss,firebase,vite,vscode&perline=6"
                 variants={AboutVariants}
               />
             </div>
