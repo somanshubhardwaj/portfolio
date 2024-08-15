@@ -35,6 +35,7 @@ import {
   twitter,
   yourlogo,
 } from "@/app/assets";
+import { text } from "stream/consumers";
 
 export const navigation = [
   {
@@ -339,5 +340,15 @@ export const projects = [
     imageUrl: benefitImage2,
     href: "https://finacialtracker.vercel.app/",
     git: "https://github.com/somanshubhardwaj/finacialtracker",
+  },
+  {
+    id: 3,
+    title: "Metaverse",
+    text: "Metaverse is a Landing page for a  virtual reality platform that allows users to create, explore, and interact with 3D worlds. ",
+    backgroundUrl: "assets/benefits/card-4.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    href: "https://metaverse-two-vert.vercel.app/",
+    git: "https://github.com/somanshubhardwaj/metaverse",
   },
 ];
