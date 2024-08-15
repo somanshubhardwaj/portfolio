@@ -1,5 +1,3 @@
-import { companyLogos } from "@/constants";
-import Image from "next/image";
 import React from "react";
 import NumberTicker from "./magicui/NumberTicker";
 

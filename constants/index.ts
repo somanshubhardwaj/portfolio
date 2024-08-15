@@ -7,8 +7,6 @@ import {
   chromecast,
   disc02,
   discord,
-  discordBlack,
-  facebook,
   figma,
   file02,
   framer,
@@ -31,11 +29,9 @@ import {
   searchMd,
   slack,
   sliders04,
-  telegram,
   twitter,
   yourlogo,
 } from "@/app/assets";
-import { text } from "stream/consumers";
 
 export const navigation = [
   {

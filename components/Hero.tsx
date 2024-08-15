@@ -4,11 +4,8 @@ import Section from "./Section";
 import Image from "next/image";
 import curve from "@/app/assets/hero/curve.png";
 import Button from "./Button";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { ScrollParallax } from "react-just-parallax";
-import { heroIcons } from "@/constants";
+import { BackgroundCircles, BottomLine } from "./design/Hero";
 import CompanyLogo from "./CompanyLogo";
-import { heroBackground, robot } from "@/app/assets";
 
 const Hero = () => {
   const parallaxRef = React.useRef(null);
