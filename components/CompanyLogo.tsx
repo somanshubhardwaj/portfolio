@@ -7,15 +7,15 @@ const CompanyLogo = ({ className }: { className: string }) => {
   const stats = [
     {
       title: "Contributions",
-      value: "750",
+      value: "870",
     },
     {
       title: "Commits(2024)",
-      value: "550",
+      value: "670",
     },
     {
-      title: "Stars",
-      value: "40",
+      title: "PR's",
+      value: "35",
     },
   ];
   return (
