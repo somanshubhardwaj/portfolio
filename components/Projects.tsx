@@ -49,9 +49,9 @@ const Projects = () => {
               }}
               key={item.id}
             >
-              <div className="relative z-50 flex flex-col min-h-[22rem] p-[2.4rem] ">
+              <div className="relative z-50 flex flex-col min-h-[22rem] p-[2.4rem] text-justify">
                 <h5 className="h5 mb-5">{item.title}</h5>
-                <p className="body-2 mb-1 text-n-3">{item.text}</p>
+                <p className="body-2 mb-1 text-n-3 text-justify">{item.text}</p>
 
                 <div className="flex items-center mt-auto">
                   <a href={item.git} className=" " target="_blank">
